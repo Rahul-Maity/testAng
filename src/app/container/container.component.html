@@ -1,0 +1,31 @@
+
+<div class="ekart--product--container">
+    <!-- <img [src]="product.pImage"> -->
+
+
+    <!-- <p>Name : {{product.name}}</p>
+    <p>Price : {{product.price}}</p>
+    <p>Color : {{product.color}} </p>
+    <p>Discounted price: {{getDiscountPrice().toFixed(2)}}</p>
+    <p>{{product.instock >0 ?'only '+ product.instock +' items left':'Not in stock'}}</p>
+    <button [disabled]="!(product.instock)">Buy Now</button>
+
+    <button (click)="decrementCartValue()">-</button>
+    <span>{{addToCart}}</span>
+    <button (click)="incrementCartValue()">+</button> -->
+
+    <app-search (searchTextChanged)="setSearchText($event)"></app-search>
+    <app-product-list [searchText]="searchText" #productListComponent></app-product-list>
+    <app-product-detail *ngIf="productListComponent.selectedProduct"></app-product-detail>
+
+    <!-- <div *ngFor="let item of listofString">
+        <p>Current element :{{item}}</p>
+    </div> -->
+
+</div>
+
+
+<!-- <input [value]="name"> -->
+<!-- <input  (input)="onNameChange($event)" > -->
+
+<!-- <p>Name={{name}}</p> -->
