@@ -9,3 +9,5 @@ import { Product } from '../../Models/Product';
 export class ProductDetailComponent {
   product:Product
 }
+
+
